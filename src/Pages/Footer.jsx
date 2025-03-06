@@ -5,7 +5,7 @@ const Footer = () => {
 	return (
 		<footer class="footer">
 			Designed with <span class="heart">❤️</span> by{' '}
-			<strong>Bhavya, Vineet, Kislay</strong>
+			<strong>Bhavya, Vineet, Kislay,added commit</strong>
 		</footer>
 	)
 }
