@@ -1,0 +1,33 @@
+{
+	"name": "new-version",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite --host --port 1337",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"@fortawesome/free-solid-svg-icons": "^6.6.0",
+		"@fortawesome/react-fontawesome": "^0.2.2",
+		"@react-leaflet/core": "^2.1.0",
+		"axios": "^1.7.4",
+		"firebase": "^10.12.5",
+		"i": "^0.3.7",
+		"leaflet": "^1.9.4",
+		"leaflet-control-geocoder": "^2.4.0",
+		"npm": "^11.2.0",
+		"opencage-api-client": "^1.0.7",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"react-leaflet": "^4.2.1",
+		"react-router-dom": "^6.26.0"
+	},
+	"devDependencies": {
+		"@types/react": "^18.3.3",
+		"@types/react-dom": "^18.3.0",
+		"@vitejs/plugin-react": "^4.3.1",
+		"vite": "^5.4.14"
+	}
+}

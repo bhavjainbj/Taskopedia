@@ -1,0 +1,106 @@
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    width: 100vw; /* Full width of the viewport */
+    padding: 1rem;
+    box-sizing: border-box; /* Include padding in the element's width and height */
+    overflow: hidden;
+}
+
+.HomeHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #3d5af1;
+    color: #f7faff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h2 {
+    margin: 0;
+}
+
+.logoutButton {
+    padding: 10px 20px;
+    background-color: #f7faff;
+    color: #3d5af1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logoutButton:hover {
+    background-color: #ebf0ff;
+}
+
+.taskContainer {
+    margin-top: 30px;
+}
+
+.taskButton {
+    padding: 15px 30px;
+    background-color: #3d5af1;
+    color: #f7faff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.taskButton:hover {
+    background-color: #2c47b5;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .HomeHeader {
+        flex-direction: column; /* Stack the header content vertically */
+        align-items: center;
+        padding: 10px;
+    }
+
+    .HomeHeader h2 {
+        font-size: 1.25rem; /* Slightly smaller font size for smaller screens */
+    }
+
+    .logoutButton {
+        padding: 8px 16px;
+        font-size: 14px; /* Smaller button for mobile */
+        margin-top: 10px;
+    }
+
+    .taskButton {
+        padding: 12px 25px; /* Adjusted padding for mobile */
+        font-size: 14px; /* Slightly smaller font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .HomeHeader {
+        padding: 5px; /* Reduced padding on very small screens */
+    }
+
+    .HomeHeader h2 {
+        font-size: 1rem; /* Even smaller font size for smaller screens */
+    }
+
+    .logoutButton {
+        padding: 6px 12px; /* Reduced padding */
+        font-size: 12px; /* Smaller font size */
+    }
+
+    .taskButton {
+        padding: 10px 20px; /* Reduced padding */
+        font-size: 12px; /* Smaller font size */
+    }
+
+    .taskContainer {
+        margin-top: 15px; /* Reduced margin for better spacing */
+    }
+}

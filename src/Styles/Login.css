@@ -1,0 +1,135 @@
+/* Login.css */
+
+
+.mainLoginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7faff;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 400px;
+}
+
+.mainLoginContainerContent {
+    width: 100%;
+}
+
+.mainLoginContainerContent h2 {
+    text-align: center;
+    color: #3d5af1;
+    margin-bottom: 20px;
+    font-weight : 700;
+    font-size : 2rem;
+}
+
+.mainLoginContainerContent label {
+    display: block;    
+    font-size: 12px;
+    color: #5e6472;
+    margin-bottom: 8px;
+}
+
+.mainLoginContainerContent input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e6ed;
+    border-radius: 10px;
+    background-color: #f7faff;
+    font-size: 14px;
+    color: #4a4a4a;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    outline : none;
+}
+
+.mainLoginContainerContent button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3d5af1;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.mainLoginContainerContent button:hover {
+    background-color: #3341d3;
+}
+
+.mainLoginContainerContent p {
+    text-align: center;
+    color: #5e6472;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom : 10px;
+}
+
+
+.mainLoginContainerContent p .signupLink{
+    font-weight : 500;
+    color : #3d5af1;
+    cursor: pointer;
+}
+
+.mainLoginContainerContent p a {
+    color: #3d5af1;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.mainLoginContainerContent p a:hover {
+    text-decoration: underline;
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .mainLoginContainer {
+        width: 95%;  /* Slightly increased width */
+        padding: 30px;  /* Increased padding */
+    }
+
+    .mainLoginContainerContent h2 {
+        font-size: 2rem;
+    }
+
+    .mainLoginContainerContent input,
+    .mainLoginContainerContent button {
+        font-size: 14px;  /* Increased font size */
+    }
+
+    .mainLoginContainerContent p {
+        font-size: 13px;  /* Slightly increased font size */
+    }
+
+    .mainLoginContainerContent button {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mainLoginContainer {
+        width: 100%;
+        padding: 20px;  /* Increased padding */
+    }
+
+    .mainLoginContainerContent h2 {
+        font-size: 1.8rem;  /* Increased font size */
+    }
+
+    .mainLoginContainerContent input,
+    .mainLoginContainerContent button {
+        font-size: 13px;
+    }
+
+    .mainLoginContainerContent p {
+        font-size: 12px;  /* Slightly increased font size */
+    }
+
+    .mainLoginContainerContent button {
+        padding: 10px;
+    }
+}

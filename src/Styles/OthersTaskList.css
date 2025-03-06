@@ -1,0 +1,161 @@
+.mainOthersTaskContainer {
+    padding: 20px;
+    height: 100vh; /* Full height of the viewport */
+    width: 100vw; /* Full width of the viewport */
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f7faff;
+    overflow-y: auto; /* Vertical scroll */
+    overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+.OthersHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #3d5af1;
+    color: #f7faff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.OthersHeader:hover {
+    transform: translateY(-2px);
+    text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3),
+                 0px 10px 15px rgba(0, 0, 0, 0.2),
+                 0px 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+.othersTaskList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-right: 10px; /* Prevent content from hiding behind the vertical scrollbar */
+}
+
+.OthersTaskCard {
+    position: relative;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1; /* Default z-index for cards */
+}
+
+.OthersTaskCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 2; /* Bring the hovered card to the top */
+}
+
+.OthersTaskCard:hover .userEmail {
+    transform: scale(1.1); /* Zoom effect */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.OthersTaskTitle {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.OthersTaskDescription {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #555;
+    text-align: left;
+}
+
+.OthersTaskLocation {
+    font-size: 14px;
+    color: #888;
+    text-align: left;
+}
+
+.locationIcon {
+    color: #3d5af1; /* Matches the primary color used in your theme */
+    margin-right: 5px;
+}
+
+.userEmail {
+     /* Ensure the email is positioned absolutely inside the card */
+    top: -25px; /* Position the user email on top of the card */
+    left: 15px;
+    background-color: #f7faff; /* Match the background color */
+    padding: 5px 10px;
+    border-radius: 5px;    
+    z-index: 3; /* Ensure the email is always above the card */
+     /* Smooth zoom transition */
+}
+
+.modalBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalCard {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.userEmail {  
+    color: #3d5af1; /* White text */    
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .mainOthersTaskContainer {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .OthersHeader {
+        padding: 15px; /* Reduce padding */
+        font-size: 20px; /* Slightly smaller font size */
+    }
+
+    .othersTaskList {
+        padding-right: 5px; /* Less padding on smaller screens */
+    }
+
+    .OthersTaskCard {
+        padding: 10px; /* Smaller padding */
+    }
+
+    .OthersTaskTitle {
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .OthersTaskDescription {
+        font-size: 12px; /* Smaller font size */
+    }
+
+    .OthersTaskLocation {
+        font-size: 12px; /* Smaller font size */
+    }
+
+    .userEmail {
+        font-size: 12px; /* Smaller font size for user email */
+        top: -20px; /* Adjust position */
+        left: 10px; /* Adjust position */
+    }
+
+    .modalCard {
+        padding: 15px; /* Reduce padding in modals */
+        width: 90%; /* Full width on small screens */
+    }
+}

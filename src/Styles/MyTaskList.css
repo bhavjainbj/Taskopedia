@@ -1,0 +1,334 @@
+.mainMyTaskContainer {
+    padding: 20px;
+    height: 100vh;
+    width: 100vw;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f7faff;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.backButton {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #3d5af1;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.backButton:hover {
+    background-color: #2e45c7;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #3d5af1;
+    color: #f7faff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header:hover {
+    transform: translateY(-2px);
+    text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3), 0px 10px 15px rgba(0, 0, 0, 0.2), 0px 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+.taskList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-right: 10px;
+}
+
+.taskCard {
+    position: relative;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.taskCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.taskTitle {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+    text-align: justify; /* Justify text */
+}
+
+.taskDescription {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #555;
+    text-align: justify; /* Justify text */
+}
+
+.taskLocation {
+    font-size: 12px;
+    color: #888;
+    text-align: justify; /* Justify text */
+    cursor: pointer;
+}
+
+.locationIcon {
+    color: #3d5af1;
+}
+
+.editButton {
+    position: absolute;
+    top: 10px;
+    right: 100px; /* Position it to the left of the delete button */
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center; /* Align icon and text */
+    gap: 5px; /* Adds a gap between the icon and the text */
+}
+
+.editButton:hover {
+    background-color: #45a049;
+}
+
+/* Add a delete button */
+.deleteButton {
+    position: absolute;
+    top: 10px;
+    right: 10px; /* Keep this to the far right */
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center; /* Align icon and text */
+    gap: 5px; /* Adds a gap between the icon and the text */
+}
+
+.deleteButton:hover {
+    background-color: #e60000;
+}
+
+
+/* Modal Styles */
+.modalBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalCard {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    max-height: 80%;
+}
+
+.modalCard input,
+.modalCard textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.modalCard .taskLocation{
+    font-size: 12px;
+    color: blue;
+}
+
+.modalCard h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.modalCard p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.error {
+    color: #ff4d4d;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Modal Styles for Edit */
+.editModalBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.editModalCard {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    max-height: 100%;
+    overflow-y: auto; /* Allow scrolling for longer content */
+}
+
+.editModalCard input{
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+}
+
+.editModalCard textarea {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.editModalCard h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.editModalCard .error {
+    color: #ff4d4d;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.editModalCard button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.editModalCard button.saveButton {
+    background-color: #3d5af1;
+    color: white;
+}
+
+.editModalCard button.saveButton:hover {
+    background-color: #2e45c7;
+}
+
+.editModalCard button.cancelButton {
+    background-color: #ccc;
+    color: black;
+    margin-left: 1rem;
+}
+
+.editModalCard button.cancelButton:hover {
+    background-color: #b3b3b3;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .mainMyTaskContainer {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .header {
+        font-size: 20px; /* Slightly smaller font size */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .backButton {
+        padding: 8px 16px; /* Smaller button size */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .taskCard {
+        padding: 10px; /* Smaller padding */
+    }
+
+    .taskTitle {
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .taskDescription {
+        font-size: 12px; /* Smaller font size */
+    }
+
+    .taskLocation {
+        font-size: 10px; /* Smaller font size */
+    }
+
+    .editButton,
+    .deleteButton {
+        padding: 5px 10px; /* Smaller buttons */
+        font-size: 10px; /* Smaller font size */
+    }
+
+    .modalCard,
+    .editModalCard {
+        padding: 15px; /* Reduce padding in modals */
+        max-width: 90%; /* Full width on small screens */
+    }
+
+    .modalCard h4,
+    .editModalCard h4 {
+        font-size: 16px; /* Smaller heading font size */
+    }
+
+    .modalCard p,
+    .editModalCard p {
+        font-size: 12px; /* Smaller paragraph font size */
+    }
+
+    .modalCard input,
+    .modalCard textarea,
+    .editModalCard input,
+    .editModalCard textarea {
+        padding: 8px; /* Smaller padding for inputs */
+    }
+}

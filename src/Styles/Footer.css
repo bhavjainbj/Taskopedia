@@ -1,0 +1,30 @@
+/* src/Styles/Footer.css */
+.footer {
+    background-color: #3d5af1; /* Match your project’s color scheme */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed; /* Optional: if you want the footer to always stick at the bottom */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+
+.heart {
+    display: inline-block;
+    color: red;
+    font-size: 24px; /* Adjust as needed */
+    animation: beat 1s infinite;
+  }
+  
+  @keyframes beat {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2); /* Heart grows bigger */
+    }
+  }
+  

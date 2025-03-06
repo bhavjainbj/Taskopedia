@@ -1,0 +1,118 @@
+/* SignUp.css */
+
+body {
+    background-color: #e5e9f0;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.mainSignUpContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7faff;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 400px;
+}
+
+.mainSignUpContainerContent {
+    width: 100%;
+}
+
+.mainSignUpContainerContent h2 {
+    text-align: center;
+    color: #3d5af1;
+    margin-bottom: 20px;
+    font-weight : 700;
+    font-size : 2rem;
+}
+
+.mainSignUpContainerContent label {
+    display: block;
+    font-size: 12px;
+    color: #5e6472;
+    margin-bottom: 8px;    
+}
+
+.mainSignUpContainerContent input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e6ed;
+    border-radius: 10px;
+    background-color: #f7faff;
+    font-size: 14px;
+    color: #4a4a4a;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    outline : none;
+}
+
+.mainSignUpContainerContent button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3d5af1;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.mainSignUpContainerContent button:hover {
+    background-color: #3341d3;
+}
+
+.mainSignUpContainerContent p {
+    text-align: center;
+    color: #5e6472;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom : 10px;
+}
+
+.mainSignUpContainerContent p .loginLink{
+    font-weight : 500;
+    color : #3d5af1;
+    cursor: pointer;
+}
+
+.mainSignUpContainerContent p a {
+    color: #3d5af1;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.mainSignUpContainerContent p a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .mainSignUpContainer {
+        padding: 20px; /* Reduce padding for smaller screens */
+        width: 90%; /* Use a percentage width on mobile */
+        max-width: 400px; /* Limit maximum width */
+    }
+
+    .mainSignUpContainerContent h2 {
+        font-size: 1.5rem; /* Adjust font size for headers */
+    }
+
+    .mainSignUpContainerContent input {
+        padding: 8px; /* Reduce input padding */
+        font-size: 13px; /* Slightly smaller font size */
+    }
+
+    .mainSignUpContainerContent button {
+        font-size: 14px; /* Slightly larger font size */
+    }
+
+    .mainSignUpContainerContent p {
+        font-size: 11px; /* Adjust font size for paragraph */
+    }
+}

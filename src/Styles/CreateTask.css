@@ -1,0 +1,174 @@
+/* Overall Container */
+.mainCreateTaskComponent {
+    display: flex;
+    flex-direction: column;    
+    height: 100vh; /* Full height of the viewport */
+    width: 100vw; /* Full width of the viewport */
+    padding: 1rem;
+    box-sizing: border-box; /* Include padding in the element's width and height */
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+/* Back Button Styling */
+.CreateTaskBackButton button {
+    background-color: #3d5af1;
+    color: #f7faff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.CreateTaskBackButton button:hover {
+    background-color: #2e45c7;
+}
+
+/* Input Area Styling */
+.inputArea {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center;
+}
+
+.inputArea input,
+.inputArea textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #3d5af1;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f7faff;
+    margin-bottom: 15px;
+}
+
+.inputArea input:focus,
+.inputArea textarea:focus {
+    outline: none;
+    border-color: #2e45c7;
+    box-shadow: 0px 0px 5px rgba(61, 90, 241, 0.5);
+}
+
+.inputArea textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+/* Button Styling */
+.createDataBtn {
+    background-color: #3d5af1;
+    color: #f7faff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    width: 50%;
+}
+
+.createDataBtn:hover {
+    background-color: #2e45c7;
+}
+
+.mapContainer {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    height: 20rem; /* Fixed height */
+    width: 100%; /* Full width */
+    transition: height 0.3s ease; /* Smooth transition for height */
+}
+  
+.hidden {
+    height: 0; /* Hide the map container */
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Selected Coordinates and Address Styling */
+p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+}
+
+.suggestions {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 10px;
+    background-color: #fff;    
+    z-index: 1000;
+    width: 100%;
+  }
+  
+  .suggestions li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .suggestions li:hover {
+    background-color: #f0f0f0;
+  }
+  
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .inputArea {
+        width: 90%;  /* Adjusted width for smaller screens */
+        padding: 15px;  /* Reduced padding */
+    }
+
+    .createDataBtn {
+        width: 80%;  /* Wider button for mobile */
+    }
+
+    .CreateTaskBackButton button {
+        font-size: 14px;  /* Adjusted font size */
+        padding: 8px 16px;  /* Smaller padding */
+    }
+    
+    .mapContainer {
+        height: 15rem;  /* Adjust map size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .inputArea {
+        width: 100%;  /* Full width on mobile */
+        padding: 10px;  /* Reduced padding */
+    }
+
+    .createDataBtn {
+        width: 100%;  /* Full width button */
+        padding: 10px;  /* Reduced padding */
+        font-size: 16px;  /* Adjusted font size */
+    }
+
+    .CreateTaskBackButton button {
+        font-size: 12px;  /* Smaller font size */
+        padding: 6px 12px;  /* Reduced padding */
+    }
+
+    .mapContainer {
+        height: 12rem;  /* Smaller map size on mobile */
+    }
+
+    .inputArea input,
+    .inputArea textarea {
+        font-size: 14px;  /* Adjusted font size */
+    }
+}
